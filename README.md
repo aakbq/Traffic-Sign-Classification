@@ -25,7 +25,7 @@ Traffic sign classification AI will also be a good help for training novice driv
 
 1.2. Literature review with links
 
-1. Build model that classifies traffic signs with 5 Tensorflow layers          https://www.kaggle.com/code/valentynsichkar/traffic-signs-classification-with-cnn
+1. Build model that classifies traffic signs with 5 Tensorflow layers https://www.kaggle.com/code/valentynsichkar/traffic-signs-classification-with-cnn
 2. Build model with 12 tensorflow layers and prevent overfitting of neural network that classifies traffic signs with Dropout https://data-flair.training/blogs/python-project-traffic-signs-recognition/
 3. Using pretrained model for CNN problems https://keras.io/api/applications/vgg/
 4. The Maxpooling layer https://www.educba.com/keras-maxpooling2d/
@@ -48,21 +48,21 @@ Traffic sign classification AI will also be a good help for training novice driv
 2.1. Information about the data
 
 Data contains 3 csv files and 3 folders with traffic sign images: meta, train, test. The first is meta data, which contains one image of each of the 43 classes of our traffic signs and 3 characteristics in the form of shape, color, sign, and class identifier of each sign. This file contains 43 rows, which are classes id, and 5 columns, which are features of these classes. In the figure below we can see the distribution of sampled columns. Values of “ColorId” column represent 0-red, 1-blue, 2-yellow, 3-white, values of “ShapeId” column represent 0-triangle, 1-circle, 2-diamond, 3-hexagon, 4-inverse triangle.
+![My Image](plots/df1_1.png)
  
 Next one is train data which contains Train.csv file and train folder. In the "Train" folder there are 43 more folders denoting classes, and in each folder, there are photos with the image of the road sign of the corresponding class. The Train.csv file contains 39209 rows, which corresponds to the number of train images, and 8 columns, which are the characteristics of each image: “Width” – width of image, “Height” – height of image, “Roi.X1” - upper left X coordinate of sign on image, “Roi.Y1” - upper left Y coordinate of sign on image, “Roi.X2” – lower right X coordinate of sign on image, “Roi.Y2” -  lower right Y coordinate of sign on image, “ClassId”, “Path”. In the figure below we can see the correlation between the columns.
+![My Image](plots/df2_1.png)
  
 In Figure 2 we can see the distribution for each column.
+![My Image](plots/df2_1.png)
  
 The third is the test data. The structure of the test data is the same as that of the train data, except that the “Test.csv” file contains 12630 rows that represent the number of images to model prediction. In the figure below we can see the correlation between the columns: “Width”,  “Height”, “Roi.X1”,  “Roi.Y1”,  “Roi.X2”,  “Roi.Y2”,  “ClassId”.
+![My Image](plots/df3_1.png)
  
 In Figure 2 we can see the distribution for each column.
+![My Image](plots/df3_2.png)
  
 The dataset is quite varying, some of the classes have many images while some classes have few images.
-
-
-
-
-
 
 
 2.2. Description of the ML models you used with some theory
@@ -85,31 +85,23 @@ Keras MaxPooling2D is a pooling operation which calculates the largest value in 
 The Dropout layer is a mask that nullifies the contribution of some neurons towards the next layer and leaves unmodified all others. We applied a Dropout layer to a hidden layer, in which case it nullifies some hidden neurons. Dropout layers are important in training CNNs because they prevent overfitting on the training data.
 I also built second model based on VGG16 pre-trained model. 
 
-
-
-
-
-
-
-
-
-
-
-
-
 3. Results
 
 3.1. Results with tables, pictures, and interesting numbers
 
 Result for first model:
 History plot of first model
+![My Image](plots/model_his1.png)
+![My Image](plots/model_his2.png)
   
 	Accuracy score is: 0.94813.
 
 Result for pre-trained model.
 History plot of pretrained model
+![My Image](plots/premodel_his1.png)
+![My Image](plots/premodel_his2.png)
   
-Accuracy score is: 0.94814.
+	Accuracy score is: 0.94814.
 
 
 4. Discussion
