@@ -89,7 +89,7 @@ I also built second model based on VGG16 pre-trained model.
 
 3.1. Results with tables, pictures, and interesting numbers
 
-Result for first model:
+Result for first model.
 History plot of first model
 ![My Image](plots/model_his1.png)
 ![My Image](plots/model_his2.png)
